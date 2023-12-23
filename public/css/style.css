@@ -3,6 +3,7 @@
 :root {
   --color-primary: #F0ECE5;
   --color-secondary: #31304D;
+  --color-dark: #161A30;
   --font-primary: 'Poppins', sans-serif;
 }
 
@@ -18,13 +19,34 @@
   background-color: var(--color-secondary);
 }
 
-.subtle-btn-secondary {
-  background-color: var(--color-secondary);
+
+/* Course Start */
+.table-secondary {
+  --bs-table-bg: var(--color-secondary);
+  --bs-table-striped-bg: var(--color-dark);
 }
 
-.subtle-btn-secondary:hover {
-  background-color: #161A30;
+.table thead tr th {
+  background-color: #212529;
 }
+
+tbody {
+  border-top: 3px solid #fff;
+}
+
+.icon {
+  fill: #fff;
+}
+
+.icon-update:hover {
+  fill: #FF9800;
+}
+
+.icon-delete:hover {
+  fill: #BF3131;
+}
+/* Course End */
+
 
 /* Home Start */
 .card {
@@ -36,7 +58,21 @@
 .w-card {
   width: 18rem;
 }
+
+.subtle-btn-secondary {
+  background-color: var(--color-secondary);
+}
+
+.subtle-btn-secondary:hover {
+  background-color: var(--color-dark);
+}
+
+.subtle-btn-secondary:active {
+  background-color: var(--color-secondary) !important;
+  border: 1px solid var(--color-secondary) !important;
+}
 /* Home End */
+
 
 @media (min-width: 576px) {
   .w-card {
