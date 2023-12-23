@@ -16,8 +16,12 @@ class CourseFactory extends Factory
      */
     public function definition(): array
     {
+        $titles = ['Git', 'Haskell', 'HTML5', 'Java', 'JavaScript', 'Kotlin', 'MongoDB', 'MySQL', 'PHP', 'PostgreSQL', 'Python', 'ReactJS', 'Ruby'];
+
         return [
-            //
+            'title' =>  fake()->unique()->randomElement($titles),
+            'description' => fake()->paragraph(1),
+            'duration' => fake()->randomDigitNotNull(),
         ];
     }
 }
