@@ -4,6 +4,7 @@
   --color-primary: #F0ECE5;
   --color-secondary: #31304D;
   --color-dark: #161A30;
+  --color-ashes: #B6BBC4;
   --font-primary: 'Poppins', sans-serif;
 }
 
@@ -11,6 +12,7 @@
   font-family: var(--font-primary);
 }
 
+/* Global use Start */
 .subtle-bg-primary {
   background-color: var(--color-primary);
 }
@@ -19,8 +21,10 @@
   background-color: var(--color-secondary);
 }
 
+.bg-ashes {
+  background-color: var(--color-ashes);
+}
 
-/* Course Start */
 .table-secondary {
   --bs-table-bg: var(--color-secondary);
   --bs-table-striped-bg: var(--color-dark);
@@ -45,13 +49,13 @@ tbody {
 .icon-delete:hover {
   fill: #BF3131;
 }
-/* Course End */
+/* Global use End */
 
 
 /* Home Start */
 .card {
   border-radius: 20px;
-  background-color: #B6BBC4;
+  background-color: var(--color-ashes);
   border: 0;
 }
 
@@ -72,6 +76,35 @@ tbody {
   border: 1px solid var(--color-secondary) !important;
 }
 /* Home End */
+
+
+/* Course Start */
+.btn-ashes {
+  background-color: var(--color-ashes);
+}
+
+.btn-ashes:hover {
+  background-color: #f0ece5de;
+}
+
+.btn-ashes:active {
+  background-color: var(--color-ashes) !important;
+  border: 1px solid var(--color-ashes) !important;
+}
+
+.subtle-btn-dark {
+  background-color: var(--color-dark);
+}
+
+.subtle-btn-dark:hover {
+  background-color: #212529;
+}
+
+.subtle-btn-dark:active {
+  background-color: var(--color-dark) !important;
+  border: 1px solid var(--color-dark) !important;
+}
+/* Course End */
 
 
 @media (min-width: 576px) {

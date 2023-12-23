@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/kursus', function () {
     return view('course.index');
 })->name('course');
+
+Route::get('/materi', function () {
+    return view('material.index');
+})->name('material');
+
+Route::get('/materi/tambah', function () {
+    return view('material.form');
+})->name('materialCreate');
