@@ -25,6 +25,10 @@
   background-color: var(--color-ashes);
 }
 
+.subtle-text-primary {
+  color: var(--color-primary);
+}
+
 .table-secondary {
   --bs-table-bg: var(--color-secondary);
   --bs-table-striped-bg: var(--color-dark);
