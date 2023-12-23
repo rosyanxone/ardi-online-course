@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\MaterialController;
 use App\Models\Course;
 use Illuminate\Support\Facades\Route;
 
@@ -14,17 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::controller(CourseController::class)->group(function () {
+    Route::get('/', 'home')->name('home');
+    Route::get('/kursus', 'index')->name('course');
 });
 
-Route::get('/kursus', function () {
-    return view('course.index');
-})->name('course');
-
-Route::get('/materi', function () {
-    return view('material.index');
-})->name('material');
+Route::get('/materi', [MaterialController::class, 'index'])->name('material');
 
 Route::get('/materi/tambah', function () {
     return view('material.form');

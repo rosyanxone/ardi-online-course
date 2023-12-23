@@ -20,7 +20,7 @@ class CourseFactory extends Factory
 
         return [
             'title' =>  fake()->unique()->randomElement($titles),
-            'description' => fake()->paragraph(1),
+            'description' => fake()->paragraph(3),
             'duration' => fake()->randomDigitNotNull(),
         ];
     }
