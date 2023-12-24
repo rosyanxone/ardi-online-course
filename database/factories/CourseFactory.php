@@ -23,7 +23,7 @@ class CourseFactory extends Factory
         return [
             'title' =>  $selectedTitle,
             'slug' =>  Str::slug($selectedTitle),
-            'description' => fake()->paragraph(3),
+            'description' => fake()->paragraph(4),
             'duration' => fake()->randomDigitNotNull(),
         ];
     }
