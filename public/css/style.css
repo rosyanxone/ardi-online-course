@@ -29,6 +29,10 @@
   color: var(--color-primary);
 }
 
+.subtle-text-secondary {
+  color: var(--color-secondary);
+}
+
 .table-secondary {
   --bs-table-bg: var(--color-secondary);
   --bs-table-striped-bg: var(--color-dark);

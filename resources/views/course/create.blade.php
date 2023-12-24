@@ -17,16 +17,19 @@
       @csrf
       <div class="mb-3">
         <label class="form-label" for="courseTitle">Judul Kursus</label>
-        <input class="form-control" id="courseTitle" name="title" type="text" placeholder="Masukkan judul kursus baru..."
-          required>
+        <input class="form-control" id="courseTitle" name="title" type="text"
+          placeholder="Masukkan judul kursus baru..." required>
       </div>
       <div class="mb-3">
         <label class="form-label" for="courseDesc">Deskripsi Kursus</label>
-        <input class="form-control" id="courseDesc" name="description" type="text"
-          placeholder="Masukkan deskripsi baru..." required>
+        <div class="form-floating">
+          <textarea class="form-control" id="floatingTextarea2" name="description" style="height: 100px"
+            placeholder="Masukkan deskripsi baru..." required></textarea>
+          <label class="subtle-text-secondary" for="floatingTextarea2">Masukkan deskripsi baru...</label>
+        </div>
       </div>
       <div class="mb-3">
-        <label class="form-label" for="courseDuration">Durasi Kursus</label>
+        <label class="form-label" for="courseDuration">Durasi Kursus/jam</label>
         <input class="form-control" id="courseDuration" name="duration" type="number"
           placeholder="Masukkan durasi kursus..." min="1" max="99" required>
       </div>

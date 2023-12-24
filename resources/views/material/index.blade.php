@@ -2,6 +2,7 @@
 
 @section('content')
   <div class="container">
+    <h2>Materi</h2>
     @session('success')
       <div class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>Sukses!</strong> {{ session('success') }}

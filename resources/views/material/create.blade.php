@@ -22,8 +22,11 @@
       </div>
       <div class="mb-3">
         <label class="form-label" for="materialDesc">Deskripsi Materi</label>
-        <input class="form-control" id="materialDesc" name="description" type="text"
-          placeholder="Masukkan deskripsi baru..." required>
+        <div class="form-floating">
+          <textarea class="form-control" id="materialDesc" name="description" style="height: 100px"
+            placeholder="Masukkan deskripsi baru..." required></textarea>
+          <label class="subtle-text-secondary" for="materialDesc">Masukkan deskripsi materi baru...</label>
+        </div>
       </div>
       <div class="mb-3">
         <label class="form-label" for="materialLink">Link Embed Materi</label>

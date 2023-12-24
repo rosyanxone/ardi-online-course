@@ -18,17 +18,20 @@
       <div class="mb-3">
         <label class="form-label" for="materialTitle">Judul Materi</label>
         <input class="form-control" id="materialTitle" name="title" type="text" value="{{ $material->title }}"
-          placeholder="Masukkan judul kursus..." required>
+          placeholder="Masukkan judul materi..." required>
       </div>
       <div class="mb-3">
         <label class="form-label" for="materialDesc">Deskripsi Materi</label>
-        <input class="form-control" id="materialDesc" name="description" type="text"
-          value="{{ $material->description }}" placeholder="Masukkan deskripsi kursus..." required>
+        <div class="form-floating">
+          <textarea class="form-control" id="materialDesc" name="description" style="height: 100px"
+            placeholder="Masukkan deskripsi baru..." required>{{ $material->description }}</textarea>
+          <label class="subtle-text-secondary" for="materialDesc">Masukkan deskripsi materi baru...</label>
+        </div>
       </div>
       <div class="mb-3">
         <label class="form-label" for="materialLink">Link Embed Materi</label>
-      <input class="form-control" id="materialLink" name="link_embed" type="text"
-        placeholder="Masukkan link embed materi..." required value="{{ $material->link_embed }}">
+        <input class="form-control" id="materialLink" name="link_embed" type="text" value="{{ $material->link_embed }}"
+          placeholder="Masukkan link embed materi..." required>
       </div>
       <div class="mb-3">
         <label class="form-label" for="materialCourseId">Kursus Materi</label>

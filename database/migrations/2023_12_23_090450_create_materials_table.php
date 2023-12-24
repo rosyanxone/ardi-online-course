@@ -20,6 +20,8 @@ return new class extends Migration
             $table->foreignId("course_id");
             $table->timestamps();
             $table->foreign("course_id")
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
                 ->references("id")
                 ->on("courses");
         });

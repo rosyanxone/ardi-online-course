@@ -22,8 +22,10 @@
       </div>
       <div class="mb-3">
         <label class="form-label" for="courseDesc">Deskripsi Kursus</label>
-        <input class="form-control" id="courseDesc" name="description" type="text"
-          placeholder="Masukkan deskripsi kursus..." required value="{{ $course->description }}">
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Masukkan deskripsi baru..." name="description" required id="floatingTextarea2" style="height: 100px">{{ $course->description }}</textarea>
+          <label for="floatingTextarea2" class="subtle-text-secondary">Masukkan deskripsi baru...</label>
+        </div>
       </div>
       <div class="mb-3">
         <label class="form-label" for="courseDuration">Durasi Kursus</label>
