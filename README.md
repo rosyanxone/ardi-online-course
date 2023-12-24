@@ -3,18 +3,24 @@
     Tes Seleksi Posisi Web Developer - Digitaliz Kampus Merdeka Batch 6
 </p> 
 
-# Table of Contents
+## Introduction
+<p>
+    Aplikasi ini dibuat untuk memenuhi persayaratan sebagai Web Developer intern pada YHC Quip. Aplikasi ini berfungsi untuk mengelola kursus dan materi sebagai admin platform online course. Teknologi yang digunakan pada aplikasi ini dibuat dengan menggunakan bahasa pemrograman PHP dan Laravel sebagai frameworknya juga menggunakan Bootstrap sebagai framework CSS. Aplikasi ini sudah memenuhi semua kriteria yang diminta yaitu, CRUD untuk kursus dan CRUD materi sebagai kebutuhan Ardi sebagai admin pengelola platform online course.
+</p>
+
+## Table of Contents
 - [Tech Stack](#tech-stack)
 - [Clone Tutorial](#clone-tutorial)
 - [App Flow](#app-flow)
-# Tech Stack
+
+## Tech Stack
 - Laravel v10.x
 <img src="https://github.com/rosyanxone/ardi-online-course/assets/73805258/bb5d3fe0-fab2-40ab-8427-ace0e54ee1cd" width="85">
 
 - Bootstrap v05.x
 <img src="https://github.com/rosyanxone/ardi-online-course/assets/73805258/e6f9f69a-8c18-4998-b75b-c0efa8a1b08b" width="85">
 
-# Clone Tutorial
+## Clone Tutorial
 - Clone Repository
 ```bash
   git clone https://github.com/rosyanxone/ardi-online-course/
@@ -35,7 +41,7 @@
 - Open [localhost:8000](http://127.0.0.1:8000/)
 ![image](https://github.com/rosyanxone/ardi-online-course/assets/73805258/6c1f0865-64c3-4608-850d-e637e774b433)
 
-# App FLow
+## App FLow
 - Home
 ![2 1 Melihat daftar kursus](https://github.com/rosyanxone/ardi-online-course/assets/73805258/1d2c8d05-0c66-4fc2-b9c1-61e2865606be)
 - Course Detail
