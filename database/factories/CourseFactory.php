@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\course>
@@ -17,9 +18,11 @@ class CourseFactory extends Factory
     public function definition(): array
     {
         $titles = ['Git', 'Haskell', 'HTML5', 'Java', 'JavaScript', 'Kotlin', 'MongoDB', 'MySQL', 'PHP', 'PostgreSQL', 'Python', 'ReactJS', 'Ruby'];
+        $selectedTitle = fake()->unique()->randomElement($titles);
 
         return [
-            'title' =>  fake()->unique()->randomElement($titles),
+            'title' =>  $selectedTitle,
+            'slug' =>  Str::slug($selectedTitle),
             'description' => fake()->paragraph(3),
             'duration' => fake()->randomDigitNotNull(),
         ];

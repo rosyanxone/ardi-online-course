@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\Material;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -17,5 +18,12 @@ class CourseController extends Controller
         $courses = Course::paginate(10);
         
         return view('course.index', compact('courses'));
+    }
+
+    function materials($slug) {
+        $course = Course::where('slug', $slug)->first();
+        $materials = Material::where('course_id', $course->id)->get();
+
+        return view('course.materials', compact(['course', 'materials']));
     }
 }

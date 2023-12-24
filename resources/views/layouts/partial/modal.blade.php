@@ -1,4 +1,4 @@
-<div class="modal fade mt-5" id="staticBackdrop-{{ $id }}" data-bs-keyboard="false"
+<div class="modal fade mt-5" id="staticBackdrop__{{ $slug }}" data-bs-keyboard="false"
   aria-labelledby="staticBackdropLabel" aria-hidden="true" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content subtle-bg-primary">
@@ -10,13 +10,14 @@
         <p>
           {{ $description }}
         </p>
-        <p>
+        <p class="m-0">
           <span class="fw-bold">Durasi:</span>
           {{ $duration }} jam
         </p>
       </div>
       <div class="modal-footer">
-        <button class="btn subtle-btn-secondary w-100 text-white" type="button">Lihat Daftar Materi</button>
+        <a class="btn subtle-btn-secondary w-100 text-white" href="{{ route('materials', $slug) }}">Lihat Daftar
+          Materi</a>
       </div>
     </div>
   </div>

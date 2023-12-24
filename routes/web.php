@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::controller(CourseController::class)->group(function () {
     Route::get('/', 'home')->name('home');
     Route::get('/kursus', 'index')->name('course');
+    Route::get('/kursus/{slug}', 'materials')->name('materials');
 });
 
 Route::get('/materi', [MaterialController::class, 'index'])->name('material');
