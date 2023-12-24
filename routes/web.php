@@ -20,6 +20,10 @@ Route::controller(CourseController::class)->group(function () {
     Route::get('/', 'home')->name('home');
     Route::get('/kursus', 'index')->name('course');
     Route::get('/kursus/tambah', 'create')->name('courseCreate');
+    Route::post('/kursus/tambah/baru', 'store')->name('courseStore');
+    Route::get('/kursus/edit/{slug}', 'edit')->name('courseEdit');
+    Route::post('/kursus/edit/{slug}/ubah', 'update')->name('courseUpdate');
+    Route::get('/kursus/destroy/{slug}', 'destroy')->name('courseDestroy');
     Route::get('/kursus/{slug}', 'materials')->name('materials');
 });
 
