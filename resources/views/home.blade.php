@@ -23,11 +23,11 @@
               data-bs-target="#staticBackdrop__{{ $course->slug }}" type="button">
               Detail Kursus
             </button>
-            @include('layouts.partial.modal', [
-                'title' => $course->title,
-                'slug' => $course->slug,
-                'description' => $course->description,
-                'duration' => $course->duration,
+            @include('layouts.partials.modal', [
+              'title' => $course->title,
+              'slug' => $course->slug,
+              'description' => $course->description,
+              'duration' => $course->duration,
             ])
           </div>
         </div>

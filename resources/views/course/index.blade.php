@@ -38,7 +38,7 @@
           @endforeach
           <tr>
             <td class="text-center" colspan="5">
-              <a class="nav-link fw-bold text-white" href="#">
+              <a class="nav-link fw-bold text-white" href="{{ route('courseCreate') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"
                   fill="#fff">
                   <path

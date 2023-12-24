@@ -1,0 +1,37 @@
+@extends('layouts.form')
+
+@section('content')
+  <div class="w-75 subtle-bg-secondary rounded-4 p-4 text-white">
+    <h1 class="fw-medium">Tambah Materi</h1>
+    <form>
+      <div class="mb-3">
+        <label class="form-label" for="materialTitle">Judul Materi</label>
+        <input class="form-control" id="materialTitle" name="title" type="text"
+          placeholder="Masukkan judul materi baru..." required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="materialDesc">Deskripsi Materi</label>
+        <input class="form-control" id="materialDesc" name="description" type="text"
+          placeholder="Masukkan deskripsi baru..." required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="materialLink">Link Embed Materi</label>
+        <input class="form-control" id="materialLink" name="link" type="text"
+          placeholder="Masukkan link embed materi..." required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="materialCourseId">Kursus Materi</label>
+        <select class="form-select" id="materialCourseId" name="courseId" aria-label="Default select example" required>
+          <option disabled selected>Pilih kursus materi</option>
+          @foreach ($courses as $course)
+            <option value={{ $course->id }}>{{ $course->title }}</option>
+          @endforeach
+        </select>
+      </div>
+      <div class="d-flex flex-column gap-2">
+        <button class="btn subtle-btn-dark fw-bold w-100 text-white" type="submit">TAMBAHKAN</button>
+        <a class="btn btn-ashes text-dark fw-bold w-100" href="{{ route('material') }}">KEMBALI</a>
+      </div>
+    </form>
+  </div>
+@endsection
