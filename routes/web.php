@@ -30,4 +30,8 @@ Route::controller(CourseController::class)->group(function () {
 Route::controller(MaterialController::class)->group(function () {
     Route::get('/materi','index')->name('material');
     Route::get('/materi/tambah', 'create')->name('materialCreate');
+    Route::post('/materi/tambah/baru', 'store')->name('materialStore');
+    Route::get('/materi/edit/{slug}', 'edit')->name('materialEdit');
+    Route::post('/materi/edit/{slug}/ubah', 'update')->name('materialUpdate');
+    Route::get('/materi/destroy/{slug}', 'destroy')->name('materialDestroy');
 });

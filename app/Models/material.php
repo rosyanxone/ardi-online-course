@@ -9,5 +9,5 @@ class Material extends Model
 {
     use HasFactory;
     protected $table = 'materials';
-    protected $fillable = ['title', 'description', 'link_embed', 'course_id'];
+    protected $fillable = ['title', 'slug', 'description', 'link_embed', 'course_id'];
 }
